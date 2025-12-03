@@ -28,6 +28,6 @@ export class Navbar {
   }
 
   logout() {
-    window.location.href = '/login';
+    window.location.href = '/signup';
   }
 }

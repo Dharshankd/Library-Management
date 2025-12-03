@@ -11,8 +11,8 @@ import { AdminLogin } from './admin/admin-login/admin-login';
 
 export const routes: Routes = [
     {path: 'home', component: Home},
-    {path: 'login', component: Login},
-    {path: '', component: Signup},
+    {path: '', component: Login},
+    {path: 'signup', component: Signup},
     {path: 'return', component: Return},
     {path: 'home1', component:  Home1},
     {path: 'edit', component: Edit},
