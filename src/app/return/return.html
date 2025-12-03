@@ -1,0 +1,33 @@
+<div class="top-strip"></div>
+
+<h2 class="page-title">Borrowed Books</h2>
+
+<h3 class="count">Total Borrowed Books : {{ borrowedBooks.length }}</h3>
+
+<div class="borrow-container" *ngIf="borrowedBooks.length > 0">
+
+  <div class="return-card">
+
+    <img [src]="borrowedBooks[0].image" class="book-img">
+
+    <h3 class="book-title">{{ borrowedBooks[0].title }}</h3>
+
+    <p class="desc">
+      {{ borrowedBooks[0].description }}
+    </p>
+
+    <p class="price">Free</p>
+    <p class="price2">Price: $14.55</p>
+
+    <button class="return-btn" (click)="returnBook()">Return</button>
+
+  </div>
+
+</div>
+
+<div *ngIf="borrowedBooks.length === 0" class="empty-msg">
+  No borrowed books.
+</div>
+
+<button class="back-btn" (click)="goBack()">Back to main menu</button>
+

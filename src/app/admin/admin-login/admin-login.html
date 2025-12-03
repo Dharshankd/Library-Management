@@ -1,0 +1,30 @@
+<div class="top-strip"></div>
+
+<h2 class="page-title">Welcome to Library</h2>
+
+<div class="form-box">
+
+  <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+
+    <label>EMAIL</label>
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="email"
+      required
+    >
+
+    <label>PASSWORD</label>
+    <input 
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      required
+    >
+
+    <button type="submit" >LOGIN</button>
+
+  </form>
+
+</div>
+

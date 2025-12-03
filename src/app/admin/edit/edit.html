@@ -1,0 +1,29 @@
+<h2 class="page-title">Edit Book</h2>
+
+<h3 class="count">Selected Book :</h3>
+
+<div class="borrow-container" *ngIf="book">
+
+  <div class="return-card">
+
+    <img [src]="book.image" class="book-img">
+
+    <h3 class="book-title">{{ book.title }}</h3>
+
+    <p class="desc">
+      {{ book.description }}
+    </p>
+
+    <p class="price">Free</p>
+    <p class="price2">Price: $14.55</p>
+
+    <button class="edit-btn" (click)="onEdit()">Edit</button>
+    <button class="save-btn" (click)="onSave()">Save</button>
+    <button class="update-btn" (click)="onUpdate()">Update</button>
+
+  </div>
+
+</div>
+
+<button class="back-btn" (click)="goBack()">Back to main menu</button>
+

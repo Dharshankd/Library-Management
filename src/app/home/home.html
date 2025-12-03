@@ -1,0 +1,50 @@
+<div class="filter-row">
+  <label>Filter:</label>
+
+  <label class="radio">
+    <input type="radio" name="filter" (change)="setFilter('all')" checked>
+    All ({{ books.length }})
+  </label>
+
+  <label class="radio">
+    <input type="radio" name="filter" (change)="setFilter('instock')">
+    instock ({{ inStockCount }})
+  </label>
+
+  <label class="radio">
+    <input type="radio" name="filter" (change)="setFilter('out')">
+    out of stock ({{ outOfStockCount }})
+  </label>
+</div>
+
+<div class="section-title">
+  Available Books
+</div>
+
+<div class="book-grid">
+
+  <div class="book-card" *ngFor="let book of filteredBooks">
+    
+    <img [src]="book.image" class="book-img">
+
+    <h3>{{ book.title }}</h3>
+
+    <p class="desc">
+      {{ book.description }}
+    </p>
+
+    <p class="price">Free</p>
+
+    <p class="status" [class.out]="!book.inStock">
+      {{ book.inStock ? 'Available in stock' : 'Not Available in stock' }}
+    </p>
+
+    <button 
+      [disabled]="!book.inStock"
+      (click)="borrowBook(book)">
+      Borrow
+    </button>
+
+  </div>
+
+</div>

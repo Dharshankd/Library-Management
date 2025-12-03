@@ -1,0 +1,101 @@
+.top-strip {
+  width: 95%;
+  height: 14px;
+  border-radius: 8px;
+  margin: 20px auto 0;
+  margin-top: 100px
+}
+
+.top-links {
+  width: 95%;
+  margin: 10px auto;
+  text-align: center;
+  
+}
+
+.top-links a {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #0c62c9;
+  text-decoration: none;
+ 
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+.page-title {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-box {
+  width: 380px;
+  margin: 30px auto;
+}
+
+.form-box label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form-box input:focus {
+  border-color: #0d6efd;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #0d6efd;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: #0b5cd5;
+}
+
+@media (max-width: 480px) {
+  .form-box {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .top-strip {
+    width: 90%;
+    margin-top: 60px;
+  }
+
+  .top-links a {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
